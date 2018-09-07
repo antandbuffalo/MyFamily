@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { MainProvider } from '../../providers/main/main';
+import { MembersPage } from '../members/members';
 
 @Component({
   selector: 'page-home',
@@ -25,5 +26,10 @@ export class HomePage {
   }
 
   items = ["Jeyaba", "asdf"];
+
+  itemSelected(selected) {
+    console.log(selected);
+    this.navCtrl.push(MembersPage);
+  }
 
 }
