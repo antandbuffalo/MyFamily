@@ -7,9 +7,14 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-list>
-        <button ion-item (click)="itemSelected(item)">
-          All
-        </button>  
-    </ion-list>
+    <ion-card (click)="itemSelected('all')">
+      <ion-card-header>
+        All
+      </ion-card-header>
+      
+      <ion-card-content>
+        View All Family Members
+      </ion-card-content>
+      
+    </ion-card>
 </ion-content>

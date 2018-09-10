@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+import { MainProvider } from '../../providers/main/main';
+import { MemberDetailsPage } from '../member-details/member-details';
 
 /**
  * Generated class for the MembersPage page.
@@ -8,18 +10,32 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-members',
   templateUrl: 'members.html',
 })
 export class MembersPage {
+  members: String[];
+  errorMessage: String;
+  
+  constructor(public navCtrl: NavController, public navParams: NavParams, public mainProvider: MainProvider) {
+  }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  getMembers() {
+    this.mainProvider.getMembers()
+       .subscribe(
+         members => this.members = members,
+         error =>  this.errorMessage = <any>error);
+  }
+
+  itemSelected(selected) {
+    console.log(selected);
+    this.navCtrl.push(MemberDetailsPage);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MembersPage');
+    this.getMembers();
   }
 
 }
