@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { FormsModule } from '@angular/forms'; 
+
+import { MemberService } from './member-service';
 
 /**
  * Generated class for the MemberDetailsPage page.
@@ -14,7 +17,15 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class MemberDetailsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  member: any
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private memberService: MemberService) {
+    //this.name = memberService.selected.name
+
+  }
+
+  ngOnInit() {
+    this.memberService.currentMember.subscribe(member => this.member = member)
   }
 
   ionViewDidLoad() {

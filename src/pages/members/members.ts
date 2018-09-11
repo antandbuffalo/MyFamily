@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { MainProvider } from '../../providers/main/main';
 import { MemberDetailsPage } from '../member-details/member-details';
+import { MemberService } from '../member-details/member-service';
 
 /**
  * Generated class for the MembersPage page.
@@ -18,7 +19,7 @@ export class MembersPage {
   members: String[];
   errorMessage: String;
   
-  constructor(public navCtrl: NavController, public navParams: NavParams, public mainProvider: MainProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public mainProvider: MainProvider, private memberService: MemberService) {
   }
 
   getMembers() {
@@ -30,6 +31,7 @@ export class MembersPage {
 
   itemSelected(selected) {
     console.log(selected);
+    this.memberService.setMember(selected);
     this.navCtrl.push(MemberDetailsPage);
   }
 

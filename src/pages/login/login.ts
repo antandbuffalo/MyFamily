@@ -21,6 +21,11 @@ export class LoginPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  ngOnInit() {
+    this.username = "a"
+    this.password = "a"
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
