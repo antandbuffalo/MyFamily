@@ -26,8 +26,9 @@ export class MembersPage {
   getMembers() {
     this.mainProvider.getMembers()
        .subscribe(
-         members => {
+         members => {           
            this.members = members.members;
+           console.log(this.members);
          },
          error =>  this.errorMessage = <any>error);
   }

@@ -12,9 +12,9 @@
 
 </ion-header>
 <ion-content padding>
-  <ion-card *ngFor="let item of members" (click)="itemSelected(item)">
+  <ion-card *ngFor="let item of members; let i = index" (click)="itemSelected(item)">
     <ion-card-header>
-      {{ item.name }}
+      {{ item.familyId }} {{ item.name }}
     </ion-card-header>            
   </ion-card>
 </ion-content>
