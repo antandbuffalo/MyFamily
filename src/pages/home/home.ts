@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { MainProvider } from '../../providers/main/main';
 import { Member } from '../../models/member';
+import { MembersPage } from '../members/members';
 
 @Component({
   selector: 'page-home',
@@ -10,14 +11,12 @@ import { Member } from '../../models/member';
 export class HomePage {
   members: Member [];
   errorMessage: String;
-  constructor(public navCtrl: NavController, public mainProvider: MainProvider) {
+  constructor(public navCtrl: NavController, private mainProvider: MainProvider) {
 
   }
 
   ionViewDidLoad() {
-    this.getMembers();
   }
-
   getMembers() {
     this.mainProvider.getMembers()
        .subscribe(
@@ -27,7 +26,7 @@ export class HomePage {
           },
           error =>  this.errorMessage = <any>error);
   }
-
-  items = ["Jeyaba", "asdf"];
-
+  itemSelected(selected) {
+    this.navCtrl.push(MembersPage);
+  }
 }

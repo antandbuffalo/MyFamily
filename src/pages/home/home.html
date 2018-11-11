@@ -7,11 +7,14 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-list>
-      <div *ngFor="let item of members">
-            <button *ngIf="item.living" ion-item (click)="itemSelected(item)">
-                <h3>{{ item.name }}</h3>
-            </button>    
-      </div>
-    </ion-list>
+    <ion-card (click)="itemSelected('all')">
+      <ion-card-header>
+        All
+      </ion-card-header>
+      
+      <ion-card-content>
+        View All Family Members
+      </ion-card-content>
+      
+    </ion-card>
 </ion-content>
