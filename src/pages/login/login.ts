@@ -23,14 +23,13 @@ export class LoginPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+    this.navCtrl.setRoot(HomePage);
   }
 
   login() {
     if(this.username === "jeyabalaji" && this.password === "12121988" || true) {
       //this.navCtrl.push(HomePage);
       this.navCtrl.setRoot(HomePage);
-    }
-    
+    }    
   }
-
 }

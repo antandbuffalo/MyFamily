@@ -18,7 +18,7 @@ export class MainProvider {
     console.log('Hello MainProvider Provider');
   }
 
-  getMembers(): Observable<string[]> {
+  getMembers(): Observable<any> {
     return this.http.get(this.apiUrl)
                     .map(this.extractData)
                     .catch(this.handleError);

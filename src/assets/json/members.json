@@ -1,4 +1,116 @@
-[
-    "Jeyabalaji",
-    "Bavani"
-]
+{
+    "members": [
+        {
+            "id": 1,
+            "name": "Sundarrajayyar",
+            "living": false,
+            "parentId": 0,
+            "isJoinedOurFamily": false
+        },
+        {
+            "id": 2,
+            "name": "Rajalakshmi",
+            "living": true,
+            "parentId": 0,
+            "isJoinedOurFamily": false
+        },
+        {
+            "id": 3,
+            "name": "Ramamoorthi",
+            "living": true,
+            "parentId": 1,
+            "isJoinedOurFamily": false
+        },
+        {
+            "id": 4,
+            "name": "KSR mami",
+            "living": true,
+            "parentId": 1,
+            "isJoinedOurFamily": true
+        },
+        {
+            "id": 5,
+            "name": "Rajaram",
+            "living": true,
+            "parentId": 1,
+            "isJoinedOurFamily": false
+        },
+        {
+            "id": 6,
+            "name": "Rajaram Mami",
+            "living": true,
+            "parentId": 1,
+            "isJoinedOurFamily": true
+        },
+        {
+            "id": 7,
+            "name": "Vidyapoornachari",
+            "living": true,
+            "parentId": 1,
+            "isJoinedOurFamily": false
+        },
+        {
+            "id": 8,
+            "name": "Malliga",
+            "living": true,
+            "parentId": 1,
+            "isJoinedOurFamily": true
+        },
+        {
+            "id": 9,
+            "name": "Krishnamani",
+            "living": true,
+            "parentId": 1,
+            "isJoinedOurFamily": false
+        },
+        {
+            "id": 10,
+            "name": "Hariharan",
+            "living": false,
+            "parentId": 1,
+            "isJoinedOurFamily": true
+        },
+        {
+            "id": 11,
+            "name": "Hari Mousi",
+            "living": true,
+            "parentId": 1,
+            "isJoinedOurFamily": false
+        },
+        {
+            "id": 12,
+            "name": "Hariharan",
+            "living": true,
+            "parentId": 1,
+            "isJoinedOurFamily": true
+        },
+        {
+            "id": 13,
+            "name": "Meera",
+            "living": true,
+            "parentId": 1,
+            "isJoinedOurFamily": false
+        },
+        {
+            "id": 14,
+            "name": "Madhavan",
+            "living": true,
+            "parentId": 1,
+            "isJoinedOurFamily": true
+        },
+        {
+            "id": 15,
+            "name": "Savithri",
+            "living": true,
+            "parentId": 1,
+            "isJoinedOurFamily": false
+        },
+        {
+            "id": 16,
+            "name": "Ravi",
+            "living": true,
+            "parentId": 1,
+            "isJoinedOurFamily": true
+        }
+    ]
+}
