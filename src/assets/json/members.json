@@ -3,6 +3,8 @@
         {
             "id": 1,
             "name": "Sundarrajayyar",
+            "nickName": "",
+            "dob": "",
             "living": false,
             "parentId": 0,
             "isJoinedOurFamily": false,

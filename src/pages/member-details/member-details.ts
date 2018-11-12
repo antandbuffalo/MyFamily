@@ -32,4 +32,12 @@ export class MemberDetailsPage {
     console.log('ionViewDidLoad MemberDetailsPage');
   }
 
+  save() {
+    console.log(this.member);
+  }
+
+  cancel() {
+    this.navCtrl.pop();
+  }
+
 }
